@@ -15,7 +15,7 @@
                     <option>Student</option>
                 </select>
                 <input type="text" name="name" placeholder="Enter your full name" required>
-                <input type="text" name="studentId" pattern="[0-9]{2}-[0-9]{5}-[0-9]{1}" placeholder="Enter your ID" required>
+                <input type="text" name="studentId" pattern="([0-9]{2}-[0-9]{5}-[0-9]{1})|([0-9]{5})" placeholder="Enter your ID" required>
                 <select name="department" required>
                     <option>Select your department</option>
                     <option>CSE</option>
