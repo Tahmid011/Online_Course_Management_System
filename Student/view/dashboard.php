@@ -7,7 +7,7 @@ if (isset($_POST['logout-btn'])) {
 }
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <title>Student Dashboard</title>
@@ -19,7 +19,7 @@ if (isset($_POST['logout-btn'])) {
                 <aside class="sidebar">
                     <h2 class="logo">CourseReg</h2>
                     <ul class="menu">
-                        <li><a href="#">👤 Profile</a></li>
+                        <li><a href="profile.php">👤 Profile</a></li>
                         <li><a href="#">📚 Available Courses</a></li>
                         <li><a href="#">📝 My Enrollments</a></li>
                         <li><a href="#">🔔 Notifications</a></li>

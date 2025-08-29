@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit();
     }
     elseif ($id === $admin_id && $password === $admin_pass) {
-        header('Location: ../../Admin/view/dashboard.php');
+        header('Location: /Online_Course_Management_System/Admin/view/dashboard.php');
         exit();
     }
     else {
@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <title>Login Page</title>
