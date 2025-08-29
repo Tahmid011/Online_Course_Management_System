@@ -11,13 +11,38 @@ body {
 }
 
 .sidebar {
-    width: 240px;
+  width: 240px;
     background: #232f3e;
     color: #fff;
     display: flex;
     flex-direction: column;
     padding-top: 32px;
     align-items: center;
+}
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+.sidebar ul li {
+  margin: 15px 0;
+}
+.sidebar ul li a {
+  color: #ecf0f1;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+}
+.sidebar ul li a:hover {
+  background: #34495e;
+  border-radius: 4px;
+}
+.sidebar i {
+  margin-right: 8px;
 }
 
 .logo {
@@ -52,17 +77,15 @@ body {
 }
 
 .logout {
-    margin-top: auto;
-    margin-bottom: 32px;
-    width: 80%;
     background: #e74c3c;
-    color: #fff;
-    border: none;
-    padding: 12px;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.2s;
+  border: none;
+  padding: 12px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  width: 80%;
+  margin: 20px auto;
+  border-radius: 6px;
 }
 
 .logout:hover {

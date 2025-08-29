@@ -1,0 +1,141 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f5f7fa;
+}
+
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 240px;
+    background: #232f3e;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding-top: 32px;
+    align-items: center;
+}
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+.sidebar ul li {
+  margin: 15px 0;
+}
+.sidebar ul li a {
+  color: #ecf0f1;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+}
+.sidebar ul li a:hover {
+  background: #34495e;
+  border-radius: 4px;
+}
+.sidebar i {
+  margin-right: 8px;
+}
+.logout-btn {
+  background: #e74c3c;
+  border: none;
+  padding: 12px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  width: 80%;
+  margin: 20px auto;
+  border-radius: 6px;
+}
+.logout-btn:hover {
+  background: #c0392b;
+}
+
+.main {
+  flex: 1;
+  padding: 30px;
+}
+h1 {
+  color: #2c3e50;
+}
+.course-section {
+  background: white;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.inline-form input, 
+.inline-form button {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+.inline-form button {
+  background: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.inline-form button:hover {
+  background: #2980b9;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+th {
+  background: #34495e;
+  color: white;
+}
+tr:nth-child(even) {
+  background: #ecf0f1;
+}
+
+.action-form input {
+  padding: 5px;
+  margin: 4px 3px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.action-form button {
+  padding: 6px 12px;
+  margin-left: 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+}
+.action-form button[name="update_course"] {
+  background: #27ae60;
+}
+.action-form button[name="delete_course"] {
+  background: #e74c3c;
+}
+.action-form button:hover {
+  opacity: 0.9;
+}
+
+.error-box {
+  background: #ffdddd;
+  border: 1px solid #e74c3c;
+  color: #c0392b;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}

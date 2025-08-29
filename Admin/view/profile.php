@@ -20,7 +20,7 @@ if (isset($_POST['logout-btn'])) {
                 <h2 class="logo">CourseReg</h2>
                 <ul class="menu">
                     <li><a href="profile.php">👤 Profile</a></li>
-                    <li><a href="#">📚 Manage Courses</a></li>
+                    <li><a href="manage_courses.php">📚 Manage Courses</a></li>
                     <li><a href="#">👥 Manage Students</a></li>
                     <li><a href="#">📝 Registrations</a></li>
                     <li><a href="#">📊 Reports</a></li>
