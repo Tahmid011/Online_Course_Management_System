@@ -54,12 +54,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['delete_course'])) {
     <meta charset="UTF-8">
     <title>Manage Courses</title>
     <link rel="stylesheet" href="../css/manage_courses.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
 </head>
 <body>
 <div class="dashboard">
-    <div class="sidebar">
-        <h2>CourseReg</h2>
-        <ul>
+    <aside class="sidebar">
+        <h2 class="logo">CourseReg</h2>
+        <ul class="menu">
             <li><a href="profile.php">👤 Profile</a></li>
             <li><a href="manage_courses.php">📚 Manage Courses</a></li>
             <li><a href="#">👥 Manage Students</a></li>
@@ -67,8 +68,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['delete_course'])) {
             <li><a href="#">📊 Reports</a></li>
             <li><a href="#">🔔 Notifications</a></li>
         </ul>
-        <button class="logout-btn">Logout</button>
-    </div>
+        <form action="" method="POST">
+            <button type="submit" name="logout-btn" class="logout">Logout</button>
+        </form>
+    </aside>
 
     <div class="main">
     <h1>Manage Courses</h1>

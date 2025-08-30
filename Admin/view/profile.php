@@ -12,6 +12,7 @@ if (isset($_POST['logout-btn'])) {
     <meta charset="UTF-8">
     <title>Profile Page</title>
     <link rel="stylesheet" href="../css/profile.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
 </head>
 <body>
     <form class="profile_admin" method="POST">

@@ -9,62 +9,16 @@ body {
   min-height: 100vh;
 }
 
-.sidebar {
-  width: 240px;
-    background: #232f3e;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    padding-top: 32px;
-    align-items: center;
-}
-.sidebar h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #fff;
-}
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-}
-.sidebar ul li {
-  margin: 15px 0;
-}
-.sidebar ul li a {
-  color: #ecf0f1;
-  text-decoration: none;
-  padding: 10px 20px;
-  display: block;
-}
-.sidebar ul li a:hover {
-  background: #34495e;
-  border-radius: 4px;
-}
-.sidebar i {
-  margin-right: 8px;
-}
-.logout-btn {
-  background: #e74c3c;
-  border: none;
-  padding: 12px;
-  color: #fff;
-  font-size: 16px;
-  cursor: pointer;
-  width: 80%;
-  margin: 20px auto;
-  border-radius: 6px;
-}
-.logout-btn:hover {
-  background: #c0392b;
-}
-
 .main {
   flex: 1;
   padding: 30px;
+  background: #f4f6fb;
 }
+
 h1 {
   color: #2c3e50;
 }
+
 .course-section {
   background: white;
   padding: 20px;
@@ -81,12 +35,14 @@ h1 {
   border-radius: 4px;
   border: 1px solid #ccc;
 }
+
 .inline-form button {
   background: #3498db;
   color: white;
   border: none;
   cursor: pointer;
 }
+
 .inline-form button:hover {
   background: #2980b9;
 }
@@ -95,14 +51,17 @@ table {
   width: 100%;
   border-collapse: collapse;
 }
+
 th, td {
   padding: 10px;
   border: 1px solid #ddd;
 }
+
 th {
   background: #34495e;
   color: white;
 }
+
 tr:nth-child(even) {
   background: #ecf0f1;
 }
@@ -113,6 +72,7 @@ tr:nth-child(even) {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+
 .action-form button {
   padding: 6px 12px;
   margin-left: 5px;
@@ -121,12 +81,15 @@ tr:nth-child(even) {
   cursor: pointer;
   color: #fff;
 }
+
 .action-form button[name="update_course"] {
   background: #27ae60;
 }
+
 .action-form button[name="delete_course"] {
   background: #e74c3c;
 }
+
 .action-form button:hover {
   opacity: 0.9;
 }

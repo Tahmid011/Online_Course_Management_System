@@ -12,6 +12,8 @@ if (isset($_POST['logout-btn'])) {
         <meta charset="UTF-8">
         <title>Admin Dashboard</title>
         <link rel="stylesheet" href="../css/dashboard.css">
+        <link rel="stylesheet" href="../css/sidebar.css">
+
     </head>
     <body>
         <form class="dashboard_admin" method="POST">
