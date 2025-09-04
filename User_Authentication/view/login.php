@@ -1,36 +1,32 @@
 <?php
+include "../../DB/db_connection.php";
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $id = trim($_POST['studentId'] ?? '');
-    $password = trim($_POST['password'] ?? '');
- 
-    /*if (preg_match('/^\d{2}-\d{5}-\d{1}$/', $id)) {
-        header('Location: /Online_Course_Management_System/Student/dashboard.php');
-        exit();
-    }
-    elseif (preg_match('/^\d{5}$/', $id)) {
-        header('Location: /Online_Course_Management_System/Admin/dashboard.php');
-        exit();
-    }
-    else {
-        $error_message = "Invalid ID format.";
-    } */
+    $studentId = trim($_POST['studentId']);
+    $password = trim($_POST['password']);
 
-    $student_id = '22-48616-3';
-    $student_pass = '11';
-    $admin_id = '48616';
-    $admin_pass = '22';
+    $sql = "SELECT * FROM register WHERE studentId='$studentId' AND password='$password'";
+    $result = $conn->query($sql);
 
-    if ($id === $student_id && $password === $student_pass) {
-        header('Location: /Online_Course_Management_System/Student/view/dashboard.php');
-        exit();
+    if ($result && $result->num_rows > 0) {
+        session_start();
+        $_SESSION['studentId'] = $studentId;
+
+        if (preg_match('/^\d{2}-\d{5}-\d{1}$/', $studentId)) {
+            header("Location: /Online_Course_Management_System/Student/view/dashboard.php");
+            exit();
+        } elseif (preg_match('/^\d{5}$/', $studentId)) {
+            header("Location: /Online_Course_Management_System/Admin/view/dashboard.php");
+            exit();
+        } else {
+            echo "Invalid ID format.";
+        }
+    } else {
+        echo "Invalid student ID or password.";
     }
-    elseif ($id === $admin_id && $password === $admin_pass) {
-        header('Location: /Online_Course_Management_System/Admin/view/dashboard.php');
-        exit();
-    }
-    else {
-        $error_message = "Invalid ID or password.";
-    }
+
+    $conn->close();
+
 }
 ?>
 <!DOCTYPE html>

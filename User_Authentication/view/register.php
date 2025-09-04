@@ -1,3 +1,50 @@
+<?php
+
+include "../../DB/db_connection.php";
+
+$success= $error = "";
+if($_SERVER["REQUEST_METHOD"]=="POST")    
+{
+$role=$_POST["role"];
+$name=$_POST["name"];
+$studentId=$_POST["studentId"];
+$department=$_POST["department"];
+$phoneNo=$_POST["phone-no"];
+$email=$_POST["email"];
+$password=$_POST["password"];
+$confirmPassword=$_POST["confirm-password"];
+if (empty($role)|| empty($name) || empty($studentId) || empty($department) || empty($phoneNo) || empty($email) || empty($password) || empty($confirmPassword))
+{
+ 
+    $error= "Fill the form";
+ 
+}
+ 
+else
+{
+ // $hash_pass= password_hash($password, PASSWORD_DEFAULT) ;
+  $sql= "INSERT INTO register (role, name, studentId, department, phone, email, password, confirmPassword) 
+  VALUES ('$role', '$name', '$studentId', '$department', '$phoneNo', '$email', '$password', '$confirmPassword')";
+
+  if($conn -> query($sql)===TRUE)
+  {
+    $success= "Registration Successfull and you can do the login";
+  }
+ 
+  else{
+   
+    $error = "error". $conn-> error;
+ 
+  }
+ 
+ 
+}
+ 
+ 
+}
+?>
+
+
 <!DOCTUPE html>
 <html lang="en">
     <head>
