@@ -22,7 +22,6 @@ if (empty($role)|| empty($name) || empty($studentId) || empty($department) || em
  
 else
 {
- // $hash_pass= password_hash($password, PASSWORD_DEFAULT) ;
   $sql= "INSERT INTO register (role, name, studentId, department, phone, email, password, confirmPassword) 
   VALUES ('$role', '$name', '$studentId', '$department', '$phoneNo', '$email', '$password', '$confirmPassword')";
 
@@ -36,8 +35,6 @@ else
     $error = "error". $conn-> error;
  
   }
- 
- 
 }
  
  
@@ -45,7 +42,7 @@ else
 ?>
 
 
-<!DOCTUPE html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -76,6 +73,7 @@ else
                 <input type="password" name="confirm-password" placeholder="Confirm your password " required>
                 <div class="signup">
                     <button type="submit" name="signup-btn">Sign UP</button>
+                    <a href="login.php">Already have an account? Login</a>
                 </div>
             </div>
         </form>
