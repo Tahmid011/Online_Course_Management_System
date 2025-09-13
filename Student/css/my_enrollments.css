@@ -1,0 +1,193 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+	background-color: #f5f7fa;
+	color: #333;
+}
+
+.dashboard {
+	display: flex;
+	min-height: 100vh;
+}
+
+.main {
+	flex: 1;
+	padding: 30px;
+}
+
+.page-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 30px;
+}
+
+h1 {
+	color: #2c3e50;
+	font-size: 28px;
+}
+
+.back-btn {
+	background-color: #3498db;
+	color: white;
+	padding: 10px 20px;
+	border-radius: 5px;
+	text-decoration: none;
+	transition: background-color 0.3s;
+}
+
+.back-btn:hover {
+	background-color: #2980b9;
+}
+
+.message-box {
+	padding: 15px;
+	border-radius: 5px;
+	margin-bottom: 25px;
+	width: 100%;
+	max-width: 900px;
+}
+
+.success {
+	background-color: #ddffdd;
+	border-left: 5px solid #2ecc71;
+	color: #27ae60;
+}
+
+.error {
+	background-color: #ffdddd;
+	border-left: 5px solid #e74c3c;
+	color: #c0392b;
+}
+
+.enrollments-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+	gap: 25px;
+}
+
+.enrollment-card {
+	background-color: white;
+	border-radius: 10px;
+	padding: 25px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+	border-left: 4px solid #3498db;
+	position: relative;
+}
+
+.enrollment-header {
+	margin-bottom: 15px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid #eee;
+}
+
+.course-code {
+	font-size: 14px;
+	color: #7f8c8d;
+	margin-bottom: 5px;
+}
+
+.course-name {
+	font-size: 20px;
+	color: #2c3e50;
+	margin-bottom: 10px;
+}
+
+.course-description {
+	color: #7f8c8d;
+	margin-bottom: 15px;
+	line-height: 1.5;
+}
+
+.enrollment-details {
+	margin-bottom: 20px;
+}
+
+.detail-item {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 8px;
+	padding: 5px 0;
+}
+
+.detail-label {
+	font-weight: bold;
+	color: #2c3e50;
+}
+
+.detail-value {
+	color: #7f8c8d;
+}
+
+.withdraw-btn {
+	width: 100%;
+	padding: 12px;
+	background-color: #e74c3c;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-weight: bold;
+	transition: background-color 0.3s;
+}
+
+.withdraw-btn:hover {
+	background-color: #c0392b;
+}
+
+.no-enrollments {
+	text-align: center;
+	padding: 60px 40px;
+	color: #7f8c8d;
+	font-size: 18px;
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.no-enrollments a {
+	color: #3498db;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.no-enrollments a:hover {
+	text-decoration: underline;
+}
+
+.enrollment-status {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	padding: 5px 10px;
+	border-radius: 15px;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.status-active {
+	background-color: #e8f5e8;
+	color: #27ae60;
+}
+
+.status-completed {
+	background-color: #e3f2fd;
+	color: #1976d2;
+}
+
+@media (max-width: 768px) {
+	.enrollments-container {
+		grid-template-columns: 1fr;
+	}
+	
+	.page-header {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 15px;
+	}
+}
